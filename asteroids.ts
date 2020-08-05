@@ -1,31 +1,3 @@
-// FIT2102 2019 Assignment 1
-// https://docs.google.com/document/d/1Gr-M6LTU-tfm4yabqZWJYg-zTjEVqHKKTCvePGCYsUA/edit?usp=sharing
-
-
-/*
- Overall design: For this program, I had to manage the game states of all the 
- SVG and graphical components to do this, I used classes to keep track of the states
- of the different graphical components such as the bullets, ship, asteroids etc.
-
- My design decisions tried to focus on making my functions pure. To aid with this, I used 
- methods such as .filter, .map, and .reduce on my arrays. Moreover, I tried to follow FRP
- by minimizing the side-effects caused by my functions.
-
- For the event-handling, I also used the Observable class. Using the Observable class allowed
- me to treat my event-streams as arrays and use methods such as .map, .filter, .flatMap and 
- .subscribe(). These methods allowed me to use the fluent functional design provided by the
- Observable class. Moreover, I implemented lazy-evaluation by keeping an actions map within 
- my program.
-
- By using lazy-evaluation for my action functions, I was able to call the particular action
- methods when I needed them to be called within the main game loop. Lastly, to focus on the 
- FRP style of programming, I also tried to implement helper functions such as "dir", 
- "radians" and "rand" to create reusable modules within my code. I even tried to implement this 
- idea into my objects such as by using the "update()" method which can be called many times
- to reposition the SVG element.
-*/
-
-
 const DEBUG = false;
 
 let score = 0;
@@ -422,19 +394,6 @@ const rand = (min: number, max: number) => ~~(Math.random() * (max - min + 1)) +
 const dist = (x1: number, x2: number, y1: number, y2: number) => ((x2-x1)**2 +(y2 -y1)**2)**0.5;
 
 function asteroids() {
-  // Inside this function you will use the classes and functions 
-  // defined in svgelement.ts and observable.ts
-  // to add visuals to the svg element in asteroids.html, animate them, and make them interactive.
-  // Study and complete the Observable tasks in the week 4 tutorial worksheet first to get ideas.
-
-  // You will be marked on your functional programming style
-  // as well as the functionality that you implement.
-  // Document your code!  
-  // Explain which ideas you have used ideas from the lectures to 
-  // create reusable, generic functions.
-  
-  // make a group for the spaceship and a transform to move it and rotate it
-  // to animate the spaceship you will update the transform property
   const svg = document.getElementById("canvas")!;
 
   const options = { // create default game options

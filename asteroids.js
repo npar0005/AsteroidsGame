@@ -348,4 +348,3 @@ if (typeof window != 'undefined')
     window.onload = () => {
         asteroids();
     };
-//# sourceMappingURL=asteroids.js.map
