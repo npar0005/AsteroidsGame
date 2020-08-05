@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "es2017",
+        "lib": ["es2017","dom"],
+        "noImplicitAny": true,
+        "strict": true,
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "sourceMap": true,
+        "watch": true
+    },
+    "include": [ "*.ts" ]
+}

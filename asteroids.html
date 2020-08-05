@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <style>
+            @import url(style.css);
+            p.highlight {
+                color: red;
+            }
+            svg {
+                background-color: rgb(41, 41, 36);
+            }
+            
+            .controls-section {
+                width: 50%;
+                background: grey;
+                color: black;
+                float: right;
+                padding: 1%;
+                font-size: 20px;
+                color: white;
+            }
+
+            kbd {
+                background: lightgrey;
+                color: lightcoral;
+                font-size: 20px;
+                padding: 1%;
+            }
+
+        </style>
+        <script src="svgelement.js"></script>
+        <script src="observable.js"></script>
+        <script src="asteroids.js"></script>
+    </head>
+    <body>
+        <h1>Asteroids 👽</h1>
+        <p style="font-size: 20px;">Score: <span id="score">0</span></p>
+        <svg id="canvas" width="600" height="600"></svg>
+        <div class="controls-section">
+            <h3>Controls</h3>
+            <p><kbd>w</kbd> - Thrust your ship in the direction you're facing</p>
+            <p><kbd>a</kbd> - Rotate your ship to the left</p>
+            <p><kbd>s</kbd> - Slow your ship down</p>
+            <p><kbd>d</kbd> - Rotate your ship to the right</p>
+            <p><kbd>(space)</kbd> - Press to shot one bullet at a time</p>
+            <p>It's time to put your skills into action and destroy the incoming asteroids! Each asteroid gravitates towards your ship so make sure to keep on the move! If you get hit by any asteroids you'll die and the game will end. Shoot the <span style="color: red;">red</span> asteroids to get a multishot power-up! Be wary of <span style="color: burlywood">strong</span> asteroids as they are unbreakable and need to be avoided at all costs! Good luck adventurer 🚀</p>
+        </div>
+    </body>
+</html>
